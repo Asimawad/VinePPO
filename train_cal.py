@@ -62,8 +62,8 @@ parser.add_argument('--use-cal', action='store_true',
 parser.add_argument('--output-dir', type=str, default='/tmp/cal_experiments',
                     help='Base output directory for experiments')
 
-# Model settings
-parser.add_argument('--model-id', type=str, default='Qwen/Qwen2.5-0.5B-Instruct',
+# Model settings, use a 1.5
+parser.add_argument('--model-id', type=str, default='Qwen/Qwen2.5-1.5B-Instruct',
                     help='HuggingFace model ID')
 
 # Dataset settings
@@ -76,7 +76,7 @@ parser.add_argument('--num-test-samples', type=int, default=50,
                     help='Number of test samples')
 
 # Training settings
-parser.add_argument('--batch-size', type=int, default=16,
+parser.add_argument('--batch-size', type=int, default=4,
                     help='Training batch size')
 parser.add_argument('--num-generations', type=int, default=4,
                     help='Number of generations per prompt (for GRPO)')
@@ -94,11 +94,11 @@ parser.add_argument('--num-iterations', type=int, default=1,
                     help='Number of iterations per batch')
 
 # Generation settings
-parser.add_argument('--max-prompt-length', type=int, default=1024,
+parser.add_argument('--max-prompt-length', type=int, default=512,
                     help='Maximum prompt length')
-parser.add_argument('--max-generation-steps', type=int, default=1024,
+parser.add_argument('--max-generation-steps', type=int, default=512,
                     help='Maximum generation length')
-parser.add_argument('--temperature', type=float, default=0.7,
+parser.add_argument('--temperature', type=float, default=0.3,
                     help='Sampling temperature')
 parser.add_argument('--top-k', type=int, default=50,
                     help='Top-k sampling')

@@ -1,29 +1,47 @@
+# Python
 *.pyc
 *.so
 *.egg-info
 *.whl
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build artifacts
 /dist/
-.ipynb_checkpoints
-.DS_Store
-.mypy_cache/
-.pytype/
+build/*
+
+# IDE
 .idea
 .vscode
+.ipynb_checkpoints
+.DS_Store
+
+# Type checking
+.mypy_cache/
+.pytype/
+
+# Environment
 .envrc
 .env
-# virtualenv/venv directories
+.venv/
 /venv/
 /bin/
 /include/
 /lib/
 /share/
 
-# Documentation
+# Documentation (removed but keeping for reference)
 /docs/_build/
 /docs/_collections/
 /docs/sg_execution_times.rst
 /docs/generated
-build/*
+
+# Experiment outputs (these should be gitignored)
+baseline_stable/
+cal_output/
+oat-output/
+
+# Old migrated code (already removed)
 cal_repo/*
-.venv/*
 demos_and_tests/*
